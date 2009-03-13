@@ -1,0 +1,4 @@
+usr/include/shallocator/*
+usr/lib/lib*.a
+usr/lib/*.la
+usr/lib/*.so

@@ -1,0 +1,79 @@
+# 
+# FILE             $Id$
+# 
+# DESCRIPTION      Project configure template.
+# 
+# PROJECT          Shared memory STL allocator.
+# 
+# AUTHOR           Michal Bukovsky <michal.bukovsky@firma.seznam.cz>
+#
+# LICENSE          see COPYING
+# 
+# Copyright (C) Seznam.cz a.s. 2007
+# All Rights Reserved
+# 
+# HISTORY
+#       2007-04-25 (bukovsky)
+#                  First draft.
+# 
+
+# initialize autoconf
+AC_INIT(libshallocator, 1.1.0, michal.bukovsky@firma.seznam.cz)
+
+# install autotools scripts to build-aux dir
+AC_CONFIG_AUX_DIR([build-aux])
+
+# initialize automake(use AC_INIT's arguments)
+AM_INIT_AUTOMAKE(-Wall foreign)
+
+AC_PREREQ(2.50)
+
+# tell autoconf where to find sources
+
+AC_CONFIG_SRCDIR([src/shallocator.cc])
+
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_CXX
+AC_PROG_CXXCPP
+AC_HEADER_STDC
+AC_PROG_LIBTOOL
+AM_PROG_LIBTOOL
+
+# This version number needs to be changed in several different ways for each
+# release. Please read the libtool documentation (info libtool 'Updating
+# version info') before touching this. (this is *.so version number).
+VERSION_INFO="-version-info 0:0:0"
+AC_SUBST(VERSION_INFO)
+
+CPPFLAGS="$CPPFLAGS -D__ENABLE_WSTRING"
+
+AC_ARG_ENABLE(optimization,[  --enable-optimization compile optimized without debug logging],[
+    case "${enableval}" in
+        no)
+            AC_MSG_NOTICE([disabling optimization.])
+            CPPFLAGS="${CPPFLAGS} -DDEBUG=1"
+        ;;
+        yes)
+            AC_MSG_NOTICE([enabling optimization.])
+            CXXEXTRAFLAGS="${CXXEXTRAFLAGS} -O2"
+            CPPFLAGS="${CPPFLAGS} -UDEBUG -DNDEBUG"
+        ;;
+        *)
+            AC_MSG_ERROR([Say yes or no to --enable-optimization.])
+        ;;
+    esac
+], [
+   CPPFLAGS="${CPPFLAGS} -DDEBUG=1"
+])
+
+# libmm
+AC_LANG_C
+AC_CHECK_LIB(mm,mm_version, , AC_MSG_ERROR([libmm library missing], 1))
+
+AC_SUBST(CXXEXTRAFLAGS)
+AC_SUBST(VERSION_INFO)
+
+# generate Makefile
+AC_OUTPUT(version Makefile src/Makefile include/Makefile include/shallocator/Makefile)
+

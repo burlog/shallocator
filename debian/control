@@ -1,0 +1,24 @@
+Source: libshallocator
+Priority: extra
+Maintainer: Michal Bukovsky <michal.bukovsky@firma.seznam.cz>
+Build-Depends: debhelper (>= 5), autotools-dev
+Standards-Version: 3.7.2
+Section: libs
+
+Package: libshallocator-dev
+Section: libdevel
+Architecture: any
+Replaces: szn-libshallocator0-dev
+Provides: szn-libshallocator0-dev
+Depends: libshallocator0 (= ${Source-Version})
+Description: Shared memory STL allocator - devel files.
+    Shared memory STL allocator - devel files.
+
+Package: libshallocator0
+Section: libs
+Architecture: any
+Replaces: szn-libshallocator0
+Provides: szn-libshallocator0
+Depends: ${shlibs:Depends}
+Description: Shared memory STL allocator.
+    Shared memory STL allocator.

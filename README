@@ -1,0 +1,15 @@
+This directory contains STL templates specialized for libmm shared memory
+allocator. You can find libmm at http://www.ossp.org/pkg/lib/mm/.
+
+This is free software. See the file COPYING for copying permission.
+
+Project homepage is at http://shallocator.sourceforge.net.
+
+Bug reports, patches or feedback of any kind is very welcome.
+
+Michal Bukovsky <michal.bukovsky@firma.seznam.cz>
+
+======================================================================
+
+This product use software developed by Ralf S. Engelschall <rse@engelschall.com>.
+
