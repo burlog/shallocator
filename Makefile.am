@@ -22,3 +22,7 @@ SUBDIRS = src include
 
 debian: debian/changelog
 	dpkg-buildpackage -rfakeroot
+
+
+pkgconfigdir=@libdir@/pkgconfig
+pkgconfig_DATA=libshallocator.pc

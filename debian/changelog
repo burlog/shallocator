@@ -1,3 +1,9 @@
+libshallocator (1.1.1) stable; urgency=low
+
+  * Pkg-config support
+
+ -- Tomas Siegl <tomas.siegl@firma.seznam.cz>  Tue, 10 Apr 2012 13:52:58 +0100
+
 libshallocator (1.1.0) stable; urgency=low
 
   * Initial public release 1.1.0

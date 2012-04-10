@@ -17,11 +17,8 @@
 #                  First draft.
 #
 
-# warn on all
-AM_CXXFLAGS = -Wall -g ${AM_CXXEXTRAFLAGS}
-
 # path to includes
-AM_CPPFLAGS = -I$(srcdir)../include
+AM_CPPFLAGS = -I@top_srcdir@/include
 
 # build this library
 lib_LTLIBRARIES = libshallocator.la
