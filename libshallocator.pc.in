@@ -8,7 +8,7 @@ Description: The seznam C++ STL allocator in SYSTEM V shared memmory
 Version: @VERSION@
 Requires:
 URL: [not yet]
-Libs: -L${libdir} -llibshallocator.la
+Libs: -L${libdir} -lshallocator -lmm
 Libs.private:
 Cflags: -I${includedir}
 
