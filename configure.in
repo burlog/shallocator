@@ -49,10 +49,10 @@ AM_PROG_LIBTOOL
 VERSION_INFO="-version-info 0:0:0"
 AC_SUBST(VERSION_INFO)
 
-CXXFLAGS="-W -Wall -Wextra -Wconversion -g"
+CXXFLAGS="$CXXFLAGS -W -Wall -Wextra -Wconversion -g"
 CPPFLAGS="$CPPFLAGS -D__ENABLE_WSTRING"
 
-AC_ARG_ENABLE(optimization,[  --enable-optimization compile optimized without debug logging],[
+AC_ARG_ENABLE(optimization, AC_HELP_STRING([--enable-optimization], [compile optimized without debug logging]),[
     case "${enableval}" in
         no)
             AC_MSG_NOTICE([disabling optimization.])
