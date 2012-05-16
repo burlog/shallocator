@@ -22,7 +22,7 @@ AC_INIT(libshallocator, 1.1.2, michal.bukovsky@firma.seznam.cz)
 
 # Enable silent builds (disable with --disable-silent-rules)
 # or simply do "make V=1"
-AM_SILENT_RULES([yes])
+#AM_SILENT_RULES([yes])
 
 # install autotools scripts to build-aux dir
 AC_CONFIG_AUX_DIR([build-aux])
@@ -34,14 +34,6 @@ AC_PREREQ(2.50)
 
 # tell autoconf where to find sources
 AC_CONFIG_SRCDIR([src/shallocator.cc])
-
-AC_PROG_CC
-AC_PROG_CPP
-AC_PROG_CXX
-AC_PROG_CXXCPP
-AC_HEADER_STDC
-AC_PROG_LIBTOOL
-AM_PROG_LIBTOOL
 
 # This version number needs to be changed in several different ways for each
 # release. Please read the libtool documentation (info libtool 'Updating
@@ -70,6 +62,14 @@ AC_ARG_ENABLE(optimization, AC_HELP_STRING([--enable-optimization], [compile opt
 ], [
    CPPFLAGS="${CPPFLAGS} -DDEBUG=1"
 ])
+
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_CXX
+AC_PROG_CXXCPP
+AC_HEADER_STDC
+AC_PROG_LIBTOOL
+AM_PROG_LIBTOOL
 
 # libmm
 AC_LANG_C

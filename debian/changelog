@@ -1,3 +1,9 @@
+libshallocator (1.1.2) stable; urgency=low
+
+  * Dependecy to libmm-dev 
+
+ -- Tomas Siegl <tomas.siegl@firma.seznam.cz>  Wed, 15 May 2012 11:52:58 +0100
+
 libshallocator (1.1.1) stable; urgency=low
 
   * Pkg-config support

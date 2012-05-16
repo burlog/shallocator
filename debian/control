@@ -10,7 +10,7 @@ Section: libdevel
 Architecture: any
 Replaces: szn-libshallocator0-dev
 Provides: szn-libshallocator0-dev
-Depends: libshallocator0 (= ${Source-Version})
+Depends: libshallocator0 (= ${Source-Version}), libmm-dev
 Description: Shared memory STL allocator - devel files.
     Shared memory STL allocator - devel files.
 
