@@ -1,3 +1,9 @@
+libshallocator (1.1.3) stable; urgency=low
+
+  * Dependecy to libmm-dev, dropped dependency to szn-libmm-dev
+
+ -- David Kottas <david.kottas@firma.seznam.cz>  Mon, 24 Sep 2012 11:52:58 +0100
+
 libshallocator (1.1.2) stable; urgency=low
 
   * Dependecy to libmm-dev 

@@ -18,7 +18,7 @@
 # 
 
 # initialize autoconf
-AC_INIT(libshallocator, 1.1.2, michal.bukovsky@firma.seznam.cz)
+AC_INIT(libshallocator, 1.1.3, michal.bukovsky@firma.seznam.cz)
 
 # Enable silent builds (disable with --disable-silent-rules)
 # or simply do "make V=1"
