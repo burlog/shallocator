@@ -1,7 +1,7 @@
 Source: libshallocator
 Priority: extra
-Maintainer: Michal Bukovsky <michal.bukovsky@firma.seznam.cz>
-Build-Depends: debhelper (>= 5), autotools-dev, szn-libmm-dev
+Maintainer: Lukas Lobotka <lukas.lobotka@firma.seznam.cz>
+Build-Depends: debhelper (>= 5), autotools-dev, szn-libmm-dev, dh-autoreconf
 Standards-Version: 3.7.2
 Section: libs
 
